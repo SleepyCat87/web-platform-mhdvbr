@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+}
+
+/* Global Settings */
+.btn {
+  width: 160px;
+  height: 30px;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.border {
+  border: 1px solid;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #eee;
+}
+
+#header-img {
+  width: 300px;
+}
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#nav-bar li {
+  padding-left: 6rem;
+}
+
+/* Make sure you put media query after general css rules; otherwise, media query won't work unless '!important' is added to each rule in media query */
+@media screen and (max-width: 650px) {
+  #nav-bar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  #nav-bar ul {
+    flex-direction: column;
+  }
+
+  #nav-bar li {
+    padding-left: 0;
+  }
+}
+
+
+/* I could add a div to wrap everything to control the total width */
+main {
+}
+
+.page-wrap {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero h2 {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+#email {
+  width: 300px;
+  height: 30px;
+  font-size: 0.8rem;
+  padding: 5px;
+  margin: 10px;
+}
+
+#hero input[type="submit"] {
+  display: block;
+  background-color: #f1c40f;
+  margin: 10px auto;
+}
+
+
+/* I copypasta this beacuase I didn't know how to do it */
+#hero input[type='submit']:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+#features, #how-it-works {
+  display: flex;
+  justify-content: center;
+}
+
+/* A trick for this part is to use a div as a container to wrap everything.
+   And then give following rules to the container div:
+    max-width: value;
+    width: 100%;
+    margin: 0 auto;
+
+    Furthermore, give .icon a width of 20vw, and .desc a width of 80vw will ensure the whole frame is not changed when the window is resized to smaller size. */
+
+.center-this {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#features {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-box {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: darkorange;
+  width: 20vw;
+}
+
+
+/* Make icons disappear */
+@media screen and (max-width: 650px) {
+  .icon {
+    display: none;
+  }
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  width: 80vw;
+}
+
+@media screen and (max-width: 650px) {
+  .desc {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+#pricing-wrap {
+  display: flex;
+}
+
+@media screen and (max-width: 650px) {
+  #pricing-wrap {
+    flex-direction: column;
+  }
+}
+
+#pricing {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 60px auto;
+}
+
+.pricing-box {
+  margin: 10px;
+}
+
+.pricing-title {
+  background-color: #ddd;
+  padding: 18px 80px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pricing-desc h2 {
+  padding: 20px;
+}
+
+.pricing-desc p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.pricing-desc button {
+  margin: 20px;
+  width: 100px;
+  background-color: #f1c40f;
+}
+
+.pricing-desc button:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+footer {
+  display: flex;
+  background-color: #ddd;
+  flex-direction: column;
+  justify-content: right;
+  margin: 0 auto;
+  padding: 16px;
+  line-height: 1.8;
+}
+
+#footer-link ul{
+  display: flex;
+  justify-content: right;
+}
+
+#footer-link li {
+  margin-left: 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#copyright {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+#copyright {
+  display: flex;
+  justify-content: right;
+}
